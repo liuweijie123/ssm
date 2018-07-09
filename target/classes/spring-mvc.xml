@@ -27,6 +27,17 @@
             </list>
         </property>
     </bean>
+<!--     文件名映射控制器 -->
+    <bean name="/*.html" class="org.springframework.web.servlet.mvc.UrlFilenameViewController">
+    	<!-- 前缀 -->
+    	<property name="prefix">
+    		<value>/</value>
+    	</property>
+    	<!-- 后缀 -->
+    	<property name="suffix">
+    		<value></value>
+    	</property>
+    </bean>
     <!-- 对静态资源的访问 -->
     <mvc:resources location="/WEB-INF/theme/js/" mapping="/theme/js/**" /> 
         <mvc:resources location="/WEB-INF/theme/css/" mapping="/theme/css/**" />
